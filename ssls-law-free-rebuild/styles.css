@@ -163,7 +163,7 @@
 .site-footer .footer-contact .footer-heading { width:100%; text-align:left; margin-bottom:17px; }
 .site-footer .footer-contact-list { align-items:flex-start; width:100%; }
 .site-footer .footer-contact-item { width:100%; justify-content:flex-start; text-align:left; }
-.site-footer .footer-contact-item .contact-icon { margin-top:4px; }
+.site-footer .footer-contact-item .contact-icon { margin-top:2px; align-self:flex-start; }
 .site-footer .footer-contact-item span:last-child { text-align:left; overflow-wrap:anywhere; }
 .contact-lines .contact-item { align-items:flex-start; gap:12px; }
 .contact-lines .contact-item .contact-icon { margin-top:6px; }
