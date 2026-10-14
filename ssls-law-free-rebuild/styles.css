@@ -166,7 +166,7 @@
 .site-footer .footer-contact-item .contact-icon { margin-top:2px; align-self:flex-start; }
 .site-footer .footer-contact-item span:last-child { text-align:left; overflow-wrap:anywhere; }
 .contact-lines .contact-item { align-items:flex-start; gap:12px; }
-.contact-lines .contact-item .contact-icon { margin-top:6px; }
+.contact-lines .contact-item .contact-icon { margin-top:2px; }
 .contact-lines .contact-item .contact-value { line-height:1.8; }
 @media (max-width:850px) {
  .site-footer .footer-contact { justify-self:end; align-items:flex-start; }
