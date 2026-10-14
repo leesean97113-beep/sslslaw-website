@@ -422,3 +422,36 @@
   text-align: center;
   margin: 0 auto;
 }
+
+
+/* Homepage-only value row: use consistent Chinese glyph metrics and exact centre alignment */
+.home-values .values {
+  align-items: start;
+}
+.home-values .home-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  text-align: center;
+}
+.home-values .home-value .value-char {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 54px;
+  margin: 0 auto 8px;
+  text-align: center;
+  font-family: "Songti SC", "Noto Serif CJK SC", SimSun, serif;
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-variant-east-asian: full-width;
+}
+.home-values .home-value .value-title {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
