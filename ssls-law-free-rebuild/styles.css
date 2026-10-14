@@ -140,3 +140,20 @@
     text-align: left;
   }
 }
+
+
+/* Consistent inline icons for all contact details */
+.contact-item { display:flex; align-items:flex-start; gap:11px; }
+.contact-item::before { display:none; }
+.contact-icon { display:inline-flex; align-items:center; justify-content:center; flex:0 0 18px; width:18px; height:20px; color:var(--gold); margin-top:2px; }
+.contact-icon svg { display:block; width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.contact-value { min-width:0; }
+.site-footer .footer-contact-list { display:flex; flex-direction:column; align-items:flex-end; gap:12px; }
+.site-footer .footer-contact-item { display:flex; flex-direction:row; align-items:flex-start; justify-content:flex-start; gap:10px; width:fit-content; max-width:100%; text-align:right; color:var(--muted); font-size:12px; line-height:1.8; }
+.site-footer .footer-contact-item .contact-icon { flex-shrink:0; }
+.site-footer .footer-contact-item span:last-child { min-width:0; }
+@media (max-width:850px) { .site-footer .footer-contact-list { align-items:flex-end; } }
+@media (max-width:560px) {
+  .site-footer .footer-contact-list { align-items:flex-start; }
+  .site-footer .footer-contact-item { text-align:left; }
+}
