@@ -4,14 +4,14 @@ This is a standalone static rebuild starter intended for Cloudflare Pages. It do
 
 ## Included
 - Responsive charcoal-and-antique-gold styling with Cormorant Garamond and Inter
-- Home, About, Practice Areas, Team and Contact pages
+- Home, About, Practice Areas and Contact pages
 - Mobile navigation, page titles/descriptions, canonical URL updates
 - Contact form that opens the visitor's email application addressed to `general@sslslaw.com`
 - Cloudflare Pages SPA fallback (`_redirects`)
-- Text-based logo fallback because the original Airo logo file was not available
+- Uses the uploaded horizontal logo asset
 
 ## Important before publishing
-1. Review all content, biographies, qualifications, address, phone numbers and email address.
+1. Review all content, qualifications, address, phone numbers and email address.
 2. The Team page currently uses a typographic portrait placeholder; replace it with approved partner photographs if available.
 3. The contact form is a `mailto:` handoff, not a server-side form. Visitors must have an email application configured and still need to press Send. For direct form submissions, configure a form provider or a Cloudflare Pages Function before publishing.
 4. Confirm the canonical domain and whether `www.sslslaw.com` should be the preferred URL.
