@@ -475,3 +475,35 @@
   word-break: normal;
   overflow-wrap: normal;
 }
+
+/* About page values: four balanced columns like the homepage values row */
+.about-values-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+.about-values-grid .practice-card {
+  min-width: 0;
+  padding: 26px 20px;
+  text-align: center;
+}
+.about-values-grid .value-char {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  margin: 0 auto 8px;
+  text-align: center;
+}
+.about-values-grid .practice-card h3 {
+  margin: 8px 0 14px;
+  font-size: 22px;
+}
+.about-values-grid .practice-card .body-copy {
+  text-align: center;
+}
+@media (max-width: 850px) {
+  .about-values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .about-values-grid { grid-template-columns: 1fr; }
+}
