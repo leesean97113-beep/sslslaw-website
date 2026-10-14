@@ -455,3 +455,13 @@
   margin: 0 auto;
   text-align: center;
 }
+
+/* About page — justify the two Our Story paragraphs only */
+.page-body .two-col > .content-card:first-child > p.body-copy {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
