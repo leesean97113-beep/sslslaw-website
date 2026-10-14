@@ -557,3 +557,15 @@
 @media (max-width: 560px) {
   .about-values-grid { grid-template-columns: 1fr; }
 }
+
+/* Remove gold divider lines/gaps from the About-page values row */
+.about-values-grid,
+.about-values-grid .practice-card {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.about-values-grid .practice-card::before,
+.about-values-grid .practice-card::after {
+  content: none !important;
+  display: none !important;
+}
