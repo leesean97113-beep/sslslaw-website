@@ -204,3 +204,50 @@
 @media (max-width: 560px) {
   .site-footer .footer-contact { width: 100%; }
 }
+
+
+/* Definitive footer contact-column alignment: heading and details share one left edge */
+.site-footer .footer-grid > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: stretch;
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+}
+.site-footer .footer-grid > div:nth-child(3) .footer-heading {
+  display: block;
+  align-self: stretch;
+  width: 100%;
+  margin: 0 0 17px;
+  text-align: left;
+}
+.site-footer .footer-grid > div:nth-child(3) .footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: 12px;
+}
+.site-footer .footer-grid > div:nth-child(3) .footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+}
+.site-footer .footer-grid > div:nth-child(3) .footer-contact-item .contact-icon {
+  flex: 0 0 18px;
+  margin-top: 3px;
+}
+@media (max-width: 850px) {
+  .site-footer .footer-grid > div:nth-child(3),
+  .site-footer .footer-grid > div:nth-child(3) .footer-heading,
+  .site-footer .footer-grid > div:nth-child(3) p:not(.footer-heading) {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
