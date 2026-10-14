@@ -176,3 +176,31 @@
 @media (max-width:560px) {
  .site-footer .footer-contact { justify-self:start; width:100%; }
 }
+
+
+/* Keep the footer CONTACT heading aligned with the contact details column */
+.site-footer .footer-contact {
+  justify-self: stretch;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  align-items: flex-start;
+}
+.site-footer .footer-contact .footer-heading {
+  display: block;
+  width: 100%;
+  margin: 0 0 17px;
+  padding: 0;
+  text-align: left;
+}
+.site-footer .footer-contact-list {
+  width: 100%;
+  align-items: stretch;
+}
+.site-footer .footer-contact-item {
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 560px) {
+  .site-footer .footer-contact { width: 100%; }
+}
