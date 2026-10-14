@@ -507,3 +507,53 @@
 @media (max-width: 560px) {
   .about-values-grid { grid-template-columns: 1fr; }
 }
+
+/* Restore the About-page values row to the homepage's simple, aligned treatment */
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 34px;
+  align-items: stretch;
+}
+.about-values-grid .practice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: 0;
+  padding: 30px 18px;
+  text-align: center;
+}
+.about-values-grid .value-char {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 54px;
+  margin: 0 auto 8px;
+  color: var(--gold);
+  text-align: center;
+  line-height: 1.2;
+}
+.about-values-grid .practice-card h3 {
+  width: 100%;
+  margin: 8px 0 14px;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+}
+.about-values-grid .practice-card .body-copy {
+  width: 100%;
+  flex: 1;
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+}
+@media (max-width: 850px) {
+  .about-values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .about-values-grid { grid-template-columns: 1fr; }
+}
