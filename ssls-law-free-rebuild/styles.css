@@ -581,3 +581,10 @@
   box-shadow: none !important;
   background: var(--bg) !important;
 }
+
+
+/* Contact form submission feedback and spam-trap field */
+.website-field{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}
+.contact-form button[disabled]{opacity:.65;cursor:wait}
+.form-note.form-success{color:#7fae8a}
+.form-note.form-error{color:#d99a8c}
