@@ -366,3 +366,12 @@
   text-justify: inter-word;
   hyphens: auto;
 }
+
+
+/* Avoid hyphenating words in the justified homepage introduction */
+.home-intro-copy p {
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
