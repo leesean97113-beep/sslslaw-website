@@ -375,3 +375,16 @@
   overflow-wrap: normal;
   word-break: normal;
 }
+
+
+/* Hard override: never insert hyphens into words in the homepage firm-introduction copy */
+.home-intro-copy,
+.home-intro-copy p,
+.home-intro-copy p * {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  line-break: auto;
+}
