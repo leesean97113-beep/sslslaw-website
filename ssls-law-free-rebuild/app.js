@@ -21,7 +21,7 @@ const areas = [
 const home = {
  hero:{label:"Advocates & Solicitors",chineseName:"绍淞 · 李轩 律师楼",cta:"Explore Our Practice",secondaryCta:"Contact Us"},
  intro:{label:"The Firm",heading:"A Practice Built on Integrity",paragraphs:[
- "Siew Song & Lee Sean is a law firm committed to providing high-calibre legal representation with a practical, client-focused approach.",
+ "Siew Song & Lee Sean is a law firm committed to providing excellent legal representation through a practical approach centred on each client’s needs.",
  "Every matter is shaped by its own facts, priorities and practical realities. We take time to listen, understand each client's objectives and concerns, and assess the available options with care.",
  "We provide clear, considered advice and maintain open communication throughout the process, helping clients understand their position, weigh potential risks and make informed decisions with confidence.",
  "Guided by integrity, diligence and professional responsibility, we strive to deliver thoughtful, proportionate and effective legal support, while respecting the trust our clients place in us."
