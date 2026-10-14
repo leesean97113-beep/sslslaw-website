@@ -388,3 +388,14 @@
   overflow-wrap: normal !important;
   line-break: auto;
 }
+
+
+/* Prevent browser hyphenation of the left-column firm introduction as well */
+.section.panel .split .split-box:first-child .body-copy p,
+.section.panel .split .split-box:first-child .body-copy p * {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
