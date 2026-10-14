@@ -358,3 +358,11 @@
     text-justify: inter-word;
   }
 }
+
+
+/* Justify only the three supporting paragraphs under “A Practice Built on Integrity” */
+.home-intro-copy p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
