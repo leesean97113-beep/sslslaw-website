@@ -465,3 +465,13 @@
   word-break: normal;
   overflow-wrap: normal;
 }
+
+/* About page — justify the Our Approach paragraphs as well */
+.page-body .two-col > .content-card:nth-child(2) > p.body-copy {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
