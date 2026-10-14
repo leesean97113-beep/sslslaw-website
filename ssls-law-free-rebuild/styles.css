@@ -28,3 +28,41 @@
   .page-body > .content-card { padding:24px; }
   .page-hero { padding-left:20px; padding-right:20px; }
 }
+
+
+/* Practice-area titles and card footer alignment */
+.practice-card h3,
+.content-card h2 {
+  color: var(--gold);
+}
+.content-card > h3 {
+  color: var(--gold-soft);
+  font-size: 22px;
+  margin: 28px 0 12px;
+}
+.practice-card {
+  padding-bottom: 28px;
+}
+.practice-card .text-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(201,168,76,.16);
+  width: 100%;
+}
+.page-body > section.content-card {
+  margin-bottom: 28px !important;
+  padding: clamp(26px, 3.5vw, 38px);
+}
+.page-body > section.content-card .bullet-list {
+  margin-bottom: 4px;
+}
+@media (max-width: 560px) {
+  .practice-card .text-link {
+    padding-top: 12px;
+  }
+  .page-body > section.content-card {
+    padding: 23px;
+    margin-bottom: 20px !important;
+  }
+}
