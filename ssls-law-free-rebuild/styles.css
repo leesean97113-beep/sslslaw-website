@@ -569,3 +569,15 @@
   content: none !important;
   display: none !important;
 }
+
+/* Keep the About values separators, but make them hairline-thin instead of broad gold gaps */
+.about-values-grid {
+  gap: 1px !important;
+  background: rgba(201, 168, 76, 0.16) !important;
+  border: 1px solid rgba(201, 168, 76, 0.16) !important;
+}
+.about-values-grid .practice-card {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: var(--bg) !important;
+}
