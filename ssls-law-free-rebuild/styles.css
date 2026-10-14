@@ -342,3 +342,19 @@
     text-align: left;
   }
 }
+
+
+/* Justified text for the homepage firm introduction */
+.home-intro .body-copy p,
+.section.panel .split .split-box.body-copy p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+@media (max-width: 560px) {
+  .home-intro .body-copy p,
+  .section.panel .split .split-box.body-copy p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
