@@ -66,3 +66,77 @@
     margin-bottom: 20px !important;
   }
 }
+
+
+/* Footer alignment: brand left, navigation centred, contact details right */
+.site-footer .footer-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 58px);
+}
+.site-footer .footer-grid > div:first-child {
+  align-items: flex-start;
+  text-align: left;
+}
+.site-footer .footer-grid > div:nth-child(2) {
+  align-items: center;
+  text-align: center;
+}
+.site-footer .footer-grid > div:nth-child(3) {
+  align-items: flex-end;
+  text-align: right;
+}
+.site-footer .footer-grid > div:nth-child(3) .footer-heading {
+  width: 100%;
+  text-align: right;
+}
+.site-footer .footer-grid > div:nth-child(3) p:not(.footer-heading) {
+  text-align: right;
+}
+.site-footer .footer-brand {
+  margin-left: 0;
+  justify-content: flex-start;
+}
+.site-footer .footer-logo {
+  margin-left: 0;
+}
+@media (max-width: 850px) {
+  .site-footer .footer-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    row-gap: 34px;
+  }
+  .site-footer .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+  .site-footer .footer-grid > div:nth-child(2) {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .site-footer .footer-grid > div:nth-child(3),
+  .site-footer .footer-grid > div:nth-child(3) .footer-heading,
+  .site-footer .footer-grid > div:nth-child(3) p:not(.footer-heading) {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+@media (max-width: 560px) {
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .site-footer .footer-grid > div:first-child {
+    grid-column: auto;
+  }
+  .site-footer .footer-grid > div:nth-child(2) {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .site-footer .footer-grid > div:nth-child(3) {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .site-footer .footer-grid > div:nth-child(3) .footer-heading,
+  .site-footer .footer-grid > div:nth-child(3) p:not(.footer-heading) {
+    text-align: left;
+  }
+}
