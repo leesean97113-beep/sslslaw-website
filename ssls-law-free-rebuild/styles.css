@@ -1056,3 +1056,33 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   }
   .site-header > .brand .brand-image { height: 42px; }
 }
+
+
+/* Fine-tune mobile logo centring: reserve balanced space around the wordmark */
+@media (max-width: 850px) {
+  .site-header {
+    padding-left: 68px;
+    padding-right: 68px;
+  }
+  .site-header > .brand {
+    left: calc(50% - 8px);
+    width: min(70vw, 310px);
+    max-width: calc(100% - 136px);
+  }
+  .site-header > .brand .brand-image {
+    height: 44px;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+  }
+  .site-header > .menu-toggle {
+    right: 18px;
+  }
+}
+@media (max-width: 380px) {
+  .site-header > .brand {
+    left: calc(50% - 7px);
+    width: calc(100% - 124px);
+    max-width: calc(100% - 124px);
+  }
+  .site-header > .brand .brand-image { height: 39px; }
+}
