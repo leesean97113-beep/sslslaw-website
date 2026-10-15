@@ -1284,3 +1284,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transform: translateX(20px) !important;
   }
 }
+
+
+/* Final optical balance: ease Lee Sean slightly back to the left on mobile */
+@media (max-width: 850px) {
+  .hero h1.hero-firm-name > span:last-child {
+    transform: translateX(15px) !important;
+  }
+}
