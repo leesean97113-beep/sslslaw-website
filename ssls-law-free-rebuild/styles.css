@@ -711,7 +711,7 @@
 
 /* Monochrome surfaces and readable white text throughout the existing pages. */
 .site-header { background: rgba(0,0,0,.97); border-bottom-color: rgba(255,255,255,.18); }
-nav a, .credentials { color: #f4f4f4; }
+nav a, .credentials { color: #ffffff; }
 nav a:hover, nav a.active, .footer-grid a:hover { color: #ffffff; }
 nav .nav-contact { color: #ffffff; border-color: rgba(255,255,255,.55); }
 .hero:before { color: rgba(255,255,255,.035); }
@@ -719,7 +719,7 @@ nav .nav-contact { color: #ffffff; border-color: rgba(255,255,255,.55); }
 .hero-sub, .hero-description, .body-copy, .practice-card p, .page-hero p,
 .bullet-list, .contact-lines, .contact-form label, .form-note,
 .footer-tagline, .footer-grid p:not(.footer-heading), .footer-grid a:not(.brand) {
-  color: #e0e0e0;
+  color: #ffffff;
 }
 .button { background: #ffffff; color: #000000; border-color: #ffffff; }
 .button:hover { background: #e7e7e7; border-color: #e7e7e7; color: #000000; }
@@ -730,7 +730,7 @@ nav .nav-contact { color: #ffffff; border-color: rgba(255,255,255,.55); }
 .grid { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.22); }
 .content-card { border-color: rgba(255,255,255,.22); }
 .contact-form input, .contact-form textarea { background: #090909; color: #ffffff; border-color: rgba(255,255,255,.3); }
-.contact-form input::placeholder, .contact-form textarea::placeholder { color: #cfcfcf; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #ffffff; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: #ffffff; box-shadow: 0 0 0 2px rgba(255,255,255,.10); }
 .site-footer { background: #080808; border-top-color: rgba(255,255,255,.24); }
 .footer-heading, .section-label, .eyebrow, .role, .specialties span,
@@ -738,7 +738,7 @@ nav .nav-contact { color: #ffffff; border-color: rgba(255,255,255,.55); }
 .specialties span { border-color: rgba(255,255,255,.35); }
 .portrait-placeholder { background: #111111; color: #ffffff; border-color: rgba(255,255,255,.25); }
 .cookie-note { background: #101010; border-color: rgba(255,255,255,.3); }
-.cookie-note p, .footer-bottom { color: #d0d0d0; }
+.cookie-note p, .footer-bottom { color: #ffffff; }
 .cookie-note button { border-color: #ffffff; color: #ffffff; }
 .ornament:before, .ornament:after { background: rgba(255,255,255,.42); }
 .corners:before, .corners:after { border-color: rgba(255,255,255,.48); }
@@ -798,7 +798,7 @@ nav .nav-contact { border-color: rgba(255,255,255,.45); }
 .grid, .about-values-grid { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.18); }
 .practice-card:hover { background: #121212; }
 .contact-form input, .contact-form textarea { background: #090909; color: #fff; border-color: rgba(255,255,255,.28); }
-.contact-form input::placeholder, .contact-form textarea::placeholder { color: #e0e0e0; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #ffffff; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: #fff; }
 .content-card, .team-card, .cta-box { background: #080808; border-color: rgba(255,255,255,.25); }
 .portrait-placeholder { background: #111; border-color: rgba(255,255,255,.25); color: #fff; }
@@ -810,7 +810,7 @@ nav .nav-contact { border-color: rgba(255,255,255,.45); }
   color: #f0f0f0;
 }
 .contact-lines li:before, .bullet-list li::marker { color: #fff; }
-.footer-bottom { border-top-color: rgba(255,255,255,.18); color: #e0e0e0; }
+.footer-bottom { border-top-color: rgba(255,255,255,.18); color: #ffffff; }
 .enquiry-warning { background: #0a0a0a; border-color: rgba(255,255,255,.32); border-left-color: #fff; }
 .enquiry-warning strong, .website-disclaimer strong, .website-disclaimer a { color: #fff; }
 .website-disclaimer p { background: #080808; border-left-color: #fff; }
