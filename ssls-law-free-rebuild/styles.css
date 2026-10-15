@@ -1212,3 +1212,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .home-values .home-value-card .value-char { font-size: 38px; }
   .home-values .home-value-card h3 { font-size: 12px; letter-spacing: .05em; }
 }
+
+
+/* Mobile navigation: keep Contact link compact and consistent with other menu items */
+@media (max-width: 850px) {
+  .site-header nav .nav-contact {
+    display: inline-flex;
+    align-self: flex-start;
+    width: auto;
+    min-width: 0;
+    max-width: max-content;
+    padding: 9px 15px !important;
+    margin: 4px 0 0 !important;
+    line-height: 1.25;
+    border-width: 1px;
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
+}
