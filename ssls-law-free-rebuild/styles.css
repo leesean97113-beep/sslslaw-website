@@ -691,3 +691,64 @@
 .disclaimer-modal-actions button { min-height: 46px; padding: 12px 20px; border: 1px solid var(--gold); background: var(--gold); color: #1b1916; font-size: 12px; font-weight: 600; letter-spacing: .035em; cursor: pointer; }
 .disclaimer-modal-actions button:hover { background: #dfc16a; border-color: #dfc16a; }
 @media (max-width: 520px) { .disclaimer-modal { padding: 14px; } .disclaimer-modal-panel { padding: 25px 21px; max-height: 92vh; } .disclaimer-modal-actions { align-items: stretch; flex-direction: column; } .disclaimer-modal-actions button { width: 100%; } }
+
+
+/* SSLS monochrome theme: black backgrounds, white typography and white logo */
+:root {
+  color-scheme: dark;
+  --bg: #000000;
+  --panel: #090909;
+  --panel2: #111111;
+  --gold: #ffffff;
+  --gold-soft: #e8e8e8;
+  --text: #ffffff;
+  --muted: #e0e0e0;
+  --border: rgba(255,255,255,.22);
+}
+
+/* Keep the existing logo artwork and sizing; render its mask in white. */
+.brand-image { background-color: #ffffff; }
+
+/* Monochrome surfaces and readable white text throughout the existing pages. */
+.site-header { background: rgba(0,0,0,.97); border-bottom-color: rgba(255,255,255,.18); }
+nav a, .credentials { color: #f4f4f4; }
+nav a:hover, nav a.active, .footer-grid a:hover { color: #ffffff; }
+nav .nav-contact { color: #ffffff; border-color: rgba(255,255,255,.55); }
+.hero:before { color: rgba(255,255,255,.035); }
+.chinese { color: #ffffff; }
+.hero-sub, .hero-description, .body-copy, .practice-card p, .page-hero p,
+.bullet-list, .contact-lines, .contact-form label, .form-note,
+.footer-tagline, .footer-grid p:not(.footer-heading), .footer-grid a:not(.brand) {
+  color: #e0e0e0;
+}
+.button { background: #ffffff; color: #000000; border-color: #ffffff; }
+.button:hover { background: #e7e7e7; border-color: #e7e7e7; color: #000000; }
+.button.outline { background: transparent; color: #ffffff; border-color: rgba(255,255,255,.72); }
+.button.outline:hover { background: rgba(255,255,255,.09); }
+.section.panel, .split-box:nth-child(2), .practice-card:hover { background: #0b0b0b; }
+.practice-card, .split-box, .content-card, .team-card { background: #000000; }
+.grid { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.22); }
+.content-card { border-color: rgba(255,255,255,.22); }
+.contact-form input, .contact-form textarea { background: #090909; color: #ffffff; border-color: rgba(255,255,255,.3); }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #cfcfcf; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: #ffffff; box-shadow: 0 0 0 2px rgba(255,255,255,.10); }
+.site-footer { background: #080808; border-top-color: rgba(255,255,255,.24); }
+.footer-heading, .section-label, .eyebrow, .role, .specialties span,
+.value-char, .value-title, .text-link, .contact-icon { color: #ffffff; }
+.specialties span { border-color: rgba(255,255,255,.35); }
+.portrait-placeholder { background: #111111; color: #ffffff; border-color: rgba(255,255,255,.25); }
+.cookie-note { background: #101010; border-color: rgba(255,255,255,.3); }
+.cookie-note p, .footer-bottom { color: #d0d0d0; }
+.cookie-note button { border-color: #ffffff; color: #ffffff; }
+.ornament:before, .ornament:after { background: rgba(255,255,255,.42); }
+.corners:before, .corners:after { border-color: rgba(255,255,255,.48); }
+.practice-card .text-link { border-top-color: rgba(255,255,255,.22); }
+.privacy-language-divider { border-color: rgba(255,255,255,.24); }
+.disclaimer-modal, .disclaimer-modal-card { background-color: #080808; color: #ffffff; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
