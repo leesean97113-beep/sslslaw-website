@@ -822,3 +822,87 @@ nav .nav-contact { border-color: rgba(255,255,255,.45); }
 .cookie-note { background: #0b0b0b; border-color: rgba(255,255,255,.3); }
 .cookie-note button { border-color: #fff; color: #fff; }
 @media (max-width:850px) { nav { background: #000; } }
+
+
+/* SSLS refined graphite theme: softer contrast, warm neutral accents, calm reading surfaces */
+:root {
+  color-scheme: dark;
+  --bg: #141618;
+  --panel: #191c1f;
+  --panel2: #202428;
+  --gold: #b7a783;
+  --gold-soft: #c9bea5;
+  --text: #d3d5d4;
+  --muted: #aeb3b4;
+  --border: rgba(210, 211, 205, .15);
+}
+html { background: #141618; }
+body { background: #141618; color: #d3d5d4; }
+.site-header { background: rgba(20,22,24,.96); border-bottom-color: rgba(183,167,131,.22); }
+.brand-image { background-color: #d8d8d4; }
+nav a, .nav-contact, .credentials { color: #c8cbc9; }
+nav a:hover, nav a.active, .footer-grid a:hover { color: #c9b995; }
+nav .nav-contact { border-color: rgba(183,167,131,.55); }
+.hero:before { color: rgba(183,167,131,.035); }
+.hero h1, .page-hero h1, .content-card h2, .content-card > h3, .practice-card h3 { color: #e0ded7; }
+.chinese, .eyebrow, .section-label, .role, .value-char, .value-title,
+.footer-heading, .text-link, .contact-icon, .contact-icon svg,
+.disclaimer-modal-eyebrow, .disclaimer-modal-panel h2, .disclaimer-modal-link {
+  color: #c2b18b;
+}
+.hero-sub, .hero-description, .body-copy, .practice-card p, .page-hero p,
+.bullet-list, .contact-lines, .contact-form label, .form-note,
+.footer-tagline, .footer-grid p:not(.footer-heading), .footer-grid a:not(.brand),
+.content-card p, .enquiry-warning p, .website-disclaimer p {
+  color: #b8bdbd;
+}
+.button, .disclaimer-modal-actions button {
+  background: #b7a783;
+  color: #17191b;
+  border-color: #b7a783;
+}
+.button:hover, .disclaimer-modal-actions button:hover {
+  background: #c8baa0;
+  border-color: #c8baa0;
+  color: #17191b;
+}
+.button.outline { background: transparent; color: #d0c5ac; border-color: rgba(183,167,131,.55); }
+.button.outline:hover { background: rgba(183,167,131,.09); }
+.section.panel, .split-box:nth-child(2), .practice-card, .content-card,
+.team-card, .cta-box, .site-footer, .disclaimer-modal-panel {
+  background: #191c1f;
+}
+.split-box { background: #16191b; }
+.practice-card:hover { background: #202428; }
+.grid, .about-values-grid { background: rgba(183,167,131,.13); border-color: rgba(183,167,131,.15); }
+.content-card, .team-card, .cta-box { border-color: rgba(210,211,205,.14); }
+.contact-form input, .contact-form textarea {
+  background: #202428; color: #d3d5d4; border-color: rgba(210,211,205,.22);
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #8f9697; }
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #b7a783; box-shadow: 0 0 0 2px rgba(183,167,131,.10);
+}
+.site-footer { border-top-color: rgba(183,167,131,.22); }
+.specialties span { color: #c8cbc9; border-color: rgba(183,167,131,.28); }
+.portrait-placeholder { background: #202428; color: #c9ccca; border-color: rgba(210,211,205,.16); }
+.cookie-note { background: #202428; border-color: rgba(210,211,205,.18); }
+.cookie-note p, .footer-bottom { color: #aeb3b4; }
+.cookie-note button { border-color: #b7a783; color: #c9bea5; }
+.ornament:before, .ornament:after { background: rgba(183,167,131,.42); }
+.corners:before, .corners:after { border-color: rgba(183,167,131,.35); }
+.practice-card .text-link { border-top-color: rgba(210,211,205,.13); }
+.privacy-language-divider { border-color: rgba(210,211,205,.16); background: rgba(210,211,205,.16); }
+.disclaimer-modal, .disclaimer-modal-card { background-color: #191c1f; color: #d3d5d4; }
+.disclaimer-modal-panel { border-color: rgba(183,167,131,.3); }
+.disclaimer-modal-panel p:not(.disclaimer-modal-eyebrow) { color: #b8bdbd; }
+.disclaimer-modal-panel .disclaimer-modal-secondary { color: #969d9e !important; }
+.enquiry-warning { background: #202428; border-color: rgba(210,211,205,.14); border-left-color: #b7a783; }
+.enquiry-warning strong, .website-disclaimer strong, .website-disclaimer a,
+.privacy-page .content-card a { color: #c9bea5; }
+.website-disclaimer p { background: #191c1f; border-left-color: #b7a783; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #b7a783;
+  outline-offset: 3px;
+}
+@media (max-width:850px) { nav { background: #191c1f; } }
