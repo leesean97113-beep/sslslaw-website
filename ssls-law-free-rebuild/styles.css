@@ -1238,3 +1238,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     margin-left: 58px !important;
   }
 }
+
+
+/* Final mobile homepage wordmark alignment: use transform so indentation is visible */
+@media (max-width: 850px) {
+  .hero h1.hero-firm-name .hero-ampersand {
+    margin: 2px 0 !important;
+    transform: translateX(68px) !important;
+    align-self: flex-start !important;
+  }
+  .hero h1.hero-firm-name > span:last-child {
+    transform: translateX(8px);
+  }
+}
