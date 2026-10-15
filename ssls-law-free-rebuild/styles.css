@@ -588,3 +588,56 @@
 .contact-form button[disabled]{opacity:.65;cursor:wait}
 .form-note.form-success{color:#7fae8a}
 .form-note.form-error{color:#d99a8c}
+
+
+/* Privacy notice and enquiry warning */
+.enquiry-warning {
+  margin: 20px 0 24px;
+  padding: 18px 20px;
+  border: 1px solid rgba(201,168,76,.42);
+  border-left: 3px solid var(--gold);
+  background: rgba(201,168,76,.055);
+}
+.enquiry-warning strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold-soft);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.enquiry-warning p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+.privacy-page > .content-card {
+  max-width: 960px;
+  margin: 0 auto 35px;
+  padding: clamp(26px, 4vw, 48px);
+}
+.privacy-page .content-card h2 {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: clamp(21px, 2.5vw, 27px);
+}
+.privacy-page .content-card .body-copy {
+  line-height: 1.9;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.privacy-page .content-card a {
+  color: var(--gold-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.privacy-language-divider {
+  height: 1px;
+  margin: 42px 0 34px;
+  background: rgba(201,168,76,.25);
+}
+@media (max-width: 560px) {
+  .enquiry-warning { padding: 15px; }
+  .privacy-page .content-card .body-copy { text-align: left; }
+}
