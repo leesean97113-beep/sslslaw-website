@@ -1006,3 +1006,53 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .section .grid:not(.about-values-grid) > .practice-card::before { padding-bottom: 14px; margin-bottom: 18px; }
   .section .grid:not(.about-values-grid) > .practice-card p { margin-bottom: 20px; }
 }
+
+
+/* Mobile header refinement: centred, more legible firm logo */
+@media (max-width: 850px) {
+  .site-header {
+    height: 94px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 58px;
+  }
+  .site-header > .brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(74vw, 330px);
+    max-width: calc(100% - 112px);
+    justify-content: center;
+    margin: 0;
+  }
+  .site-header > .brand .brand-image {
+    width: 100%;
+    max-width: none;
+    height: 48px;
+    background-color: #e0dfd9;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  .site-header > .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  .site-header nav {
+    top: 94px;
+    background: #191c1f;
+  }
+}
+@media (max-width: 380px) {
+  .site-header > .brand {
+    width: calc(100% - 100px);
+    max-width: calc(100% - 100px);
+  }
+  .site-header > .brand .brand-image { height: 42px; }
+}
