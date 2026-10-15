@@ -1268,3 +1268,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transform: none !important;
   }
 }
+
+
+/* Slightly offset the final name line on mobile for visual balance */
+@media (max-width: 850px) {
+  .hero h1.hero-firm-name > span:last-child {
+    transform: translateX(8px) !important;
+  }
+}
