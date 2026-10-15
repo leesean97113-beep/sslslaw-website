@@ -1099,3 +1099,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     left: calc(50% - 14px);
   }
 }
+
+
+/* Homepage firm name arranged as a three-line wordmark */
+.hero h1.hero-firm-name {
+  line-height: .98;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.hero h1.hero-firm-name .hero-ampersand {
+  font-size: .62em;
+  line-height: 1;
+  margin: 2px 0;
+}
