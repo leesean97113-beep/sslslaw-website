@@ -752,3 +752,73 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+/* SSLS monochrome name-card theme: black backgrounds, white lettering, restrained silver details */
+:root {
+  color-scheme: dark;
+  --bg: #000000;
+  --panel: #0b0b0b;
+  --panel2: #111111;
+  --gold: #ffffff;
+  --gold-soft: #e3e3e3;
+  --text: #ffffff;
+  --muted: #f0f0f0;
+  --border: rgba(255,255,255,.22);
+}
+body { background: #000; color: #fff; }
+.site-header { background: rgba(0,0,0,.97); border-bottom-color: rgba(255,255,255,.16); }
+.brand-image { background-color: #fff; }
+nav a, .nav-contact, .hero h1, .chinese, .eyebrow, .section-label,
+.page-hero h1, .practice-card h3, .content-card h2, .content-card > h3,
+.role, .value-char, .value-title, .footer-heading, .text-link,
+.contact-icon, .contact-icon svg, .disclaimer-modal-eyebrow,
+.disclaimer-modal-panel h2, .disclaimer-modal-link {
+  color: #fff;
+}
+nav .nav-contact { border-color: rgba(255,255,255,.45); }
+.hero:before { color: rgba(255,255,255,.025); }
+.corners:before, .corners:after { border-color: rgba(255,255,255,.32); }
+.ornament:before, .ornament:after { background: rgba(255,255,255,.35); }
+.button, .disclaimer-modal-actions button {
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+}
+.button:hover, .disclaimer-modal-actions button:hover {
+  background: #e8e8e8;
+  border-color: #e8e8e8;
+  color: #000;
+}
+.button.outline { background: transparent; color: #fff; border-color: rgba(255,255,255,.7); }
+.button.outline:hover { background: rgba(255,255,255,.1); }
+.section.panel, .split-box:nth-child(2), .practice-card,
+.site-footer, .disclaimer-modal-panel { background: #080808; }
+.split-box { background: #000; }
+.grid, .about-values-grid { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.18); }
+.practice-card:hover { background: #121212; }
+.contact-form input, .contact-form textarea { background: #090909; color: #fff; border-color: rgba(255,255,255,.28); }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #e0e0e0; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: #fff; }
+.content-card, .team-card, .cta-box { background: #080808; border-color: rgba(255,255,255,.25); }
+.portrait-placeholder { background: #111; border-color: rgba(255,255,255,.25); color: #fff; }
+.specialties span { color: #fff; border-color: rgba(255,255,255,.35); }
+.contact-lines, .body-copy, .hero-description, .hero-sub, .page-hero p,
+.practice-card p, .content-card p, .bullet-list, .credentials,
+.footer-tagline, .footer-grid p:not(.footer-heading), .footer-grid a:not(.brand),
+.contact-form label, .form-note, .enquiry-warning p, .website-disclaimer p {
+  color: #f0f0f0;
+}
+.contact-lines li:before, .bullet-list li::marker { color: #fff; }
+.footer-bottom { border-top-color: rgba(255,255,255,.18); color: #e0e0e0; }
+.enquiry-warning { background: #0a0a0a; border-color: rgba(255,255,255,.32); border-left-color: #fff; }
+.enquiry-warning strong, .website-disclaimer strong, .website-disclaimer a { color: #fff; }
+.website-disclaimer p { background: #080808; border-left-color: #fff; }
+.privacy-language-divider { background: rgba(255,255,255,.25); }
+.privacy-page .content-card a { color: #fff; }
+.disclaimer-modal { background: rgba(0,0,0,.88); }
+.disclaimer-modal-panel { border-color: rgba(255,255,255,.45); }
+.disclaimer-modal-actions button { background: #fff; color: #000; }
+.cookie-note { background: #0b0b0b; border-color: rgba(255,255,255,.3); }
+.cookie-note button { border-color: #fff; color: #fff; }
+@media (max-width:850px) { nav { background: #000; } }
