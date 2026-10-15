@@ -1251,3 +1251,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transform: translateX(8px);
   }
 }
+
+
+/* Center the ampersand between the two left-aligned mobile name lines */
+@media (max-width: 850px) {
+  .hero h1.hero-firm-name {
+    width: max-content;
+    align-items: flex-start;
+  }
+  .hero h1.hero-firm-name .hero-ampersand {
+    align-self: center !important;
+    margin: 2px 0 !important;
+    transform: none !important;
+  }
+  .hero h1.hero-firm-name > span:last-child {
+    transform: none !important;
+  }
+}
