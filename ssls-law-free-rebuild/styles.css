@@ -1114,3 +1114,42 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   line-height: 1;
   margin: 2px 0;
 }
+
+
+/* Keep the original single-line firm name on desktop; stack it only on mobile */
+.hero h1.hero-firm-name {
+  display: block;
+  line-height: 1.05;
+  text-align: center;
+}
+.hero h1.hero-firm-name > span {
+  display: inline;
+}
+.hero h1.hero-firm-name .hero-ampersand {
+  display: inline;
+  font-size: 1em;
+  line-height: inherit;
+  margin: 0 .22em;
+}
+@media (max-width: 850px) {
+  .hero h1.hero-firm-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: max-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: .98;
+    gap: 2px;
+    text-align: left;
+  }
+  .hero h1.hero-firm-name > span {
+    display: block;
+  }
+  .hero h1.hero-firm-name .hero-ampersand {
+    font-size: .62em;
+    line-height: 1;
+    margin: 2px 0 2px 30px;
+  }
+}
