@@ -1086,3 +1086,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   }
   .site-header > .brand .brand-image { height: 39px; }
 }
+
+
+/* Mobile wordmark optical alignment: shift slightly further left */
+@media (max-width: 850px) {
+  .site-header > .brand {
+    left: calc(50% - 16px);
+  }
+}
+@media (max-width: 380px) {
+  .site-header > .brand {
+    left: calc(50% - 14px);
+  }
+}
