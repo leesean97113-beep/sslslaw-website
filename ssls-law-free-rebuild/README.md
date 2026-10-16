@@ -10,6 +10,15 @@ This is a standalone static rebuild starter intended for Cloudflare Pages. It do
 - Cloudflare Pages SPA fallback (`_redirects`)
 - Uses the uploaded horizontal logo asset
 
+## SEO: pre-rendered pages (re-run after editing content)
+Page content lives in `app.js`, but each page is also saved as its own static HTML file (`index.html`, `about.html`, `practice-areas.html`, `contact.html`, `privacy-notice.html`, `website-disclaimer.html`, `404.html`) so Google sees the full text, title and description of every page without running JavaScript. `sitemap.xml` and `robots.txt` are real files for the same reason.
+
+**After changing any text in `app.js`, or the layout in `index.html`, run this from this folder and commit the regenerated files:**
+```bash
+node scripts/prerender.mjs
+```
+It needs only Node.js (no packages). Page titles and descriptions are in `pageMeta` in `app.js`; the preferred domain is `siteUrl` (currently `https://sslslaw.com`). Because `404.html` exists, Cloudflare Pages returns a real 404 for unknown addresses instead of the homepage.
+
 ## Important before publishing
 1. Review all content, qualifications, address, phone numbers and email address.
 2. The Team page currently uses a typographic portrait placeholder; replace it with approved partner photographs if available.
