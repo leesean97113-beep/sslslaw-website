@@ -17,7 +17,7 @@ Page content lives in `app.js`, but each page is also saved as its own static HT
 ```bash
 node scripts/prerender.mjs
 ```
-It needs only Node.js (no packages). Page titles and descriptions are in `pageMeta` in `app.js`; the preferred domain is `siteUrl` (currently `https://sslslaw.com`). Because `404.html` exists, Cloudflare Pages returns a real 404 for unknown addresses instead of the homepage.
+It needs only Node.js (no packages). Each practice area also has its own page (e.g. `/family-law`, `/conveyancing-property`); their text is in `areaDetails` in `app.js` and should stay general information, worded factually in line with the Bar's publicity rules. Page titles and descriptions are in `pageMeta` in `app.js`; the preferred domain is `siteUrl` (currently `https://sslslaw.com`). Because `404.html` exists, Cloudflare Pages returns a real 404 for unknown addresses instead of the homepage.
 
 ## Important before publishing
 1. Review all content, qualifications, address, phone numbers and email address.
