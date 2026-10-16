@@ -11,7 +11,8 @@
 // and commit the regenerated files. Cloudflare Pages needs no build step.
 //
 // Output: index.html, about.html, practice-areas.html, contact.html,
-//         privacy-notice.html, website-disclaimer.html, 404.html, sitemap.xml
+//         privacy-notice.html, website-disclaimer.html, one page per practice
+//         area (e.g. family-law.html), 404.html, sitemap.xml
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -56,13 +57,19 @@ const context = vm.createContext({
 const appJs = readFileSync(join(root, "app.js"), "utf8");
 vm.runInContext(
   appJs +
-    "\n;globalThis.__site = { pageMeta, siteUrl, notFound, " +
+    "\n;globalThis.__site = { pageMeta, siteUrl, notFound, areas, areaDetails, areaPage, " +
     pages.map((p) => p[2]).join(", ") +
     " };",
   context,
   { filename: "app.js" },
 );
 const app = context.__site;
+// One page per practice area, e.g. /family-law -> family-law.html
+const areaPages = app.areas.map((area) => {
+  const slug = app.areaDetails[area.id].slug;
+  return { path: slug, file: slug.slice(1) + ".html", render: () => app.areaPage(area) };
+});
+
 if (app.siteUrl !== SITE) {
   throw new Error(`siteUrl in app.js (${app.siteUrl}) does not match SITE here (${SITE}).`);
 }
@@ -78,7 +85,7 @@ function replaceOnce(html, pattern, replacement, label) {
   return html.replace(pattern, replacement);
 }
 
-function build({ path, title, desc, body, noindex = false }) {
+function build({ path, title, desc, body, noindex = false, navPath = path }) {
   const url = SITE + (path === "/" ? "/" : path);
   let html = template;
 
@@ -103,9 +110,9 @@ function build({ path, title, desc, body, noindex = false }) {
   html = html.replace(/<a( class="[^"]*")? href="([^"]*)" data-route="([^"]*)"( aria-current="page")?>/g,
     (_m, cls, href, route) => {
       const classes = (cls ? cls.slice(8, -1).split(" ") : []).filter((c) => c && c !== "active");
-      if (route === path) classes.push("active");
+      if (route === navPath) classes.push("active");
       const classAttr = classes.length ? ` class="${classes.join(" ")}"` : "";
-      return `<a${classAttr} href="${href}" data-route="${route}"${route === path ? ' aria-current="page"' : ""}>`;
+      return `<a${classAttr} href="${href}" data-route="${route}"${route === navPath ? ' aria-current="page"' : ""}>`;
     });
 
   html = html.replace(/<span id="year">[^<]*<\/span>/, `<span id="year">${new Date().getFullYear()}</span>`);
@@ -116,6 +123,12 @@ for (const [path, file, builder] of pages) {
   const meta = app.pageMeta[path];
   if (!meta) throw new Error(`No pageMeta entry for ${path} in app.js`);
   writeFileSync(join(root, file), build({ path, title: meta.title, desc: meta.desc, body: app[builder]() }));
+  console.log("wrote", file);
+}
+
+for (const { path, file, render } of areaPages) {
+  const meta = app.pageMeta[path];
+  writeFileSync(join(root, file), build({ path, title: meta.title, desc: meta.desc, body: render(), navPath: "/practice-areas" }));
   console.log("wrote", file);
 }
 
@@ -132,7 +145,7 @@ const today = new Date().toISOString().slice(0, 10);
 writeFileSync(join(root, "sitemap.xml"),
   '<?xml version="1.0" encoding="UTF-8"?>\n' +
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    pages.map(([path, , , priority, freq]) =>
+    [...pages, ...areaPages.map((p) => [p.path, p.file, null, "0.8", "monthly"])].map(([path, , , priority, freq]) =>
       `  <url><loc>${SITE}${path === "/" ? "/" : path}</loc><lastmod>${today}</lastmod>` +
         `<changefreq>${freq}</changefreq><priority>${priority}</priority></url>`).join("\n") +
     "\n</urlset>\n");
