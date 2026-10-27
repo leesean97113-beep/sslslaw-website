@@ -10,7 +10,7 @@
 //
 // and commit the regenerated files. Cloudflare Pages needs no build step.
 //
-// Output: index.html, about.html, practice-areas.html, contact.html,
+// Output: index.html, about.html, practice-areas.html, contact.html, one page per service,
 //         privacy-notice.html, website-disclaimer.html, 404.html, sitemap.xml
 
 import { readFileSync, writeFileSync } from "node:fs";
@@ -56,7 +56,7 @@ const context = vm.createContext({
 const appJs = readFileSync(join(root, "app.js"), "utf8");
 vm.runInContext(
   appJs +
-    "\n;globalThis.__site = { pageMeta, siteUrl, notFound, " +
+    "\n;globalThis.__site = { pageMeta, siteUrl, notFound, services, servicePage, serviceSchema, " +
     pages.map((p) => p[2]).join(", ") +
     " };",
   context,
@@ -78,7 +78,7 @@ function replaceOnce(html, pattern, replacement, label) {
   return html.replace(pattern, replacement);
 }
 
-function build({ path, title, desc, body, noindex = false }) {
+function build({ path, title, desc, body, noindex = false, schema = null, navPath = path }) {
   const url = SITE + (path === "/" ? "/" : path);
   let html = template;
 
@@ -95,6 +95,10 @@ function build({ path, title, desc, body, noindex = false }) {
   html = replaceOnce(html, /\n?\s*<meta property="og:url" content="[^"]*">/,
     noindex ? "" : `\n  <meta property="og:url" content="${url}">`, "og:url");
 
+  // Extra structured data for this page (FAQ, breadcrumbs, service).
+  html = html.replace(/\n?\s*<script type="application\/ld\+json" data-page>[\s\S]*?<\/script>/g, "");
+  if (schema) html = replaceOnce(html, /<\/head>/, `  <script type="application/ld+json" data-page>\n  ${JSON.stringify(schema).replace(/</g, "\\u003c")}\n  </script>\n</head>`, "</head>");
+
   // Page content goes inside <main>; any previous render is replaced.
   html = replaceOnce(html, /<main id="app" tabindex="-1">[\s\S]*?<\/main>/,
     () => `<main id="app" tabindex="-1">${body}</main>`, "<main id=\"app\">");
@@ -103,9 +107,9 @@ function build({ path, title, desc, body, noindex = false }) {
   html = html.replace(/<a( class="[^"]*")? href="([^"]*)" data-route="([^"]*)"( aria-current="page")?>/g,
     (_m, cls, href, route) => {
       const classes = (cls ? cls.slice(8, -1).split(" ") : []).filter((c) => c && c !== "active");
-      if (route === path) classes.push("active");
+      if (route === navPath) classes.push("active");
       const classAttr = classes.length ? ` class="${classes.join(" ")}"` : "";
-      return `<a${classAttr} href="${href}" data-route="${route}"${route === path ? ' aria-current="page"' : ""}>`;
+      return `<a${classAttr} href="${href}" data-route="${route}"${route === navPath ? ' aria-current="page"' : ""}>`;
     });
 
   html = html.replace(/<span id="year">[^<]*<\/span>/, `<span id="year">${new Date().getFullYear()}</span>`);
@@ -117,6 +121,13 @@ for (const [path, file, builder] of pages) {
   if (!meta) throw new Error(`No pageMeta entry for ${path} in app.js`);
   writeFileSync(join(root, file), build({ path, title: meta.title, desc: meta.desc, body: app[builder]() }));
   console.log("wrote", file);
+}
+
+for (const s of app.services) {
+  const path = "/" + s.slug;
+  writeFileSync(join(root, s.slug + ".html"), build({ path, title: s.title, desc: s.desc, body: app.servicePage(s), schema: app.serviceSchema(s), navPath: "/practice-areas" }));
+  pages.push([path, s.slug + ".html", null, "0.8", "monthly"]);
+  console.log("wrote", s.slug + ".html");
 }
 
 writeFileSync(join(root, "404.html"), build({
