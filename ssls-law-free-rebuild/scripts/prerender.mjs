@@ -125,7 +125,7 @@ for (const [path, file, builder] of pages) {
 
 for (const s of app.services) {
   const path = "/" + s.slug;
-  writeFileSync(join(root, s.slug + ".html"), build({ path, title: s.title, desc: s.desc, body: app.servicePage(s), schema: app.serviceSchema(s), navPath: "/practice-areas" }));
+  writeFileSync(join(root, s.slug + ".html"), build({ path, title: s.title, desc: s.desc, body: app.servicePage(s), schema: app.serviceSchema(s), navPath: s.loc ? path : "/practice-areas" }));
   pages.push([path, s.slug + ".html", null, "0.8", "monthly"]);
   console.log("wrote", s.slug + ".html");
 }
