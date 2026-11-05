@@ -3,54 +3,17 @@
    so visitors without JavaScript (and search engines) always see the full page,
    and visitors who ask their device to reduce motion get no animation at all. */
 
-/* ---------- Homepage opening ---------- */
+/* ---------- Page titles rise in (homepage and every other page alike) ---------- */
 .motion .hero-inner { animation: none; }
-.motion .hero:before { opacity: 0; transform: scale(1.06); transition: opacity 2.4s ease, transform 3.2s cubic-bezier(.2,.7,.2,1); }
-.motion .corners:before,
-.motion .corners:after { opacity: 0; transform: scale(.4); transition: opacity .9s ease, transform 1.1s cubic-bezier(.2,.7,.2,1); }
-.motion .corners:before { transform-origin: top left; }
-.motion .corners:after { transform-origin: top right; }
-
-.motion .hero .eyebrow,
-.motion .hero-firm-name > span,
-.motion .hero .chinese,
-.motion .hero-sub,
-.motion .hero .actions {
-  opacity: 0; transform: translateY(14px); filter: blur(6px);
-  transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1), filter 1s ease, letter-spacing 1.4s cubic-bezier(.2,.7,.2,1);
-}
-.motion .hero .eyebrow { letter-spacing: .5em; }
-.motion .hero-firm-name { display: inline-block; }
-.motion .hero-firm-name > span { display: inline-block; }
-.motion .hero .ornament { color: transparent; transition: color .8s ease .2s; }
-.motion .hero .ornament:before,
-.motion .hero .ornament:after { transform: scaleX(0); transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
-.motion .hero .ornament:before { transform-origin: right center; }
-.motion .hero .ornament:after { transform-origin: left center; }
-
-/* the sequence, once .play is set */
-.motion .hero.play:before { opacity: 1; transform: none; }
-.motion .hero.play .corners:before,
-.motion .hero.play .corners:after { opacity: 1; transform: none; transition-delay: .9s; }
-.motion .hero.play .eyebrow { opacity: 1; transform: none; filter: none; letter-spacing: .25em; transition-delay: .1s; }
-.motion .hero.play .hero-firm-name > span { opacity: 1; transform: none; filter: none; }
-.motion .hero.play .hero-firm-name > span:nth-child(1) { transition-delay: .35s; }
-.motion .hero.play .hero-firm-name > span:nth-child(2) { transition-delay: .6s; }
-.motion .hero.play .hero-firm-name > span:nth-child(3) { transition-delay: .5s; }
-.motion .hero.play .ornament { color: inherit; color: var(--gold); transition-delay: 1.2s; }
-.motion .hero.play .ornament:before,
-.motion .hero.play .ornament:after { transform: none; transition-delay: .95s; }
-.motion .hero.play .chinese { opacity: 1; transform: none; filter: none; transition-delay: 1.15s; }
-.motion .hero.play .hero-sub { opacity: 1; transform: none; filter: none; transition-delay: 1.3s; }
-.motion .hero.play .actions { opacity: 1; transform: none; filter: none; transition-delay: 1.45s; }
-
-/* other pages: their title block rises in */
+.motion .hero-inner > *,
 .motion .page-hero > * { opacity: 0; transform: translateY(12px); transition: opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1); }
+.motion .hero.play .hero-inner > *,
 .motion .page-hero.play > * { opacity: 1; transform: none; }
-.motion .page-hero.play > :nth-child(2) { transition-delay: .12s; }
-.motion .page-hero.play > :nth-child(3) { transition-delay: .24s; }
-.motion .page-hero.play > :nth-child(4) { transition-delay: .32s; }
-.motion .page-hero.play > :nth-child(5) { transition-delay: .4s; }
+.motion .hero.play .hero-inner > :nth-child(2), .motion .page-hero.play > :nth-child(2) { transition-delay: .12s; }
+.motion .hero.play .hero-inner > :nth-child(3), .motion .page-hero.play > :nth-child(3) { transition-delay: .24s; }
+.motion .hero.play .hero-inner > :nth-child(4), .motion .page-hero.play > :nth-child(4) { transition-delay: .32s; }
+.motion .hero.play .hero-inner > :nth-child(5), .motion .page-hero.play > :nth-child(5) { transition-delay: .4s; }
+.motion .hero.play .hero-inner > :nth-child(6) { transition-delay: .48s; }
 
 /* ---------- Sections fade up as they scroll into view ---------- */
 .motion .rv { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1); transition-delay: var(--rv-delay, 0s); }
