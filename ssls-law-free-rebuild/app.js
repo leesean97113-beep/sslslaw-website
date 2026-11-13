@@ -30,7 +30,7 @@ const home = {
 };
 const siteUrl = "https://sslslaw.com";
 const pageMeta = {
- "/":{title:"Siew Song & Lee Sean — Advocates & Solicitors",desc:"Law firm in Petaling Jaya, Selangor. Corporate and commercial law, civil litigation, conveyancing and property, employment, family law and dispute resolution."},
+ "/":{title:"Siew Song & Lee Sean — Advocates & Solicitors",desc:"Siew Song & Lee Sean, Advocates & Solicitors. Corporate and commercial law, civil litigation, conveyancing and property, employment, family law and dispute resolution."},
  "/about":{title:"About Us | Siew Song & Lee Sean, Petaling Jaya Law Firm",desc:"Siew Song & Lee Sean is a law firm at Sunwaymas Commercial Centre, Petaling Jaya, serving individuals and businesses across Malaysia."},
  "/practice-areas":{title:"Practice Areas — Litigation, Conveyancing, Corporate & Family Law | Siew Song & Lee Sean",desc:"Corporate and commercial law, civil litigation, conveyancing and tenancy agreements, employment, family law and dispute resolution in Petaling Jaya, Selangor."},
  "/contact":{title:"Contact Our Petaling Jaya Office | Siew Song & Lee Sean",desc:"No. 19-3B, Block M, Jalan PJU 1/3C, Sunwaymas Commercial Centre, 47301 Petaling Jaya. Call +603-7886 5863 or email general@sslslaw.com."},
